@@ -1,0 +1,134 @@
+
+
+<script>
+const add = (a, b) => a + b;
+const subtract = (a, b) => a - b;
+const multiply = (a, b) => a * b;
+const divide = (a, b) => a / b;
+</script>
+
+<script>
+    const checkSurnamePalindrome = (surname) => {
+  surname = surname.toLowerCase().replace(/\s/g, '');
+  const reversedSurname = surname.split('').reverse().join('');
+  return surname === reversedSurname;
+};
+
+</script>
+
+<script>
+    const calculateAverage = (arr) => {
+  const sum = arr.reduce((total, num) => total + num, 0);
+  return sum / arr.length;
+};
+
+</script>
+
+  
+
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    function calculate() {
+      var num1 = parseFloat(document.getElementById("num1").value);
+      var num2 = parseFloat(document.getElementById("num2").value);
+      var operation = document.getElementById("operation").value;
+      
+      var result;
+      switch (operation) {
+        case '+':
+          result = add(num1, num2);
+          break;
+        case '-':
+          result = subtract(num1, num2);
+          break;
+        case '*':
+          result = multiply(num1, num2);
+          break;
+        case '/':
+          result = divide(num1, num2);
+          break;
+        default:
+          result = "Неверная операция";
+      }
+      
+      document.getElementById("result").innerHTML = result;
+    }
+  </script>
+<script>
+    function performCheck() {
+      var condition1 = document.getElementById("condition1").checked;
+      var condition2 = document.getElementById("condition2").checked;
+      var result = checkConditions(condition1, condition2);
+      var output = document.getElementById("output1");
+      output.innerHTML = result;
+    }
+  </script>
+
+<script>
+    function performCalculation() {
+      var input = document.getElementById("inputArray").value;
+      var arr = JSON.parse("[" + input + "]");
+      var result = calculateAverage(arr);
+      var output = document.getElementById("output3");
+      output.innerHTML = "Среднее значение: " + result;
+    }
+  </script>
+
+
+<script>
+    function checkPalindrome() {
+      var input = document.getElementById("inputSurname").value;
+      var result = checkSurnamePalindrome(input);
+      var output = document.getElementById("output2");
+      output.innerHTML = result ? "Фамилия является палиндромом" : "Фамилия не является палиндромом";
+    }
+  </script>
+
+</head>
+<body>
+  <h1>Калькулятор</h1>
+  <label for="num1">Число 1:</label>
+  <input type="number" id="num1">
+  <br>
+  <label for="num2">Число 2:</label>
+  <input type="number" id="num2">
+  <br>
+  <label for="operation">Операция:</label>
+  <select id="operation">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+  </select>
+  <br>
+  <button onclick="calculate()">Выполнить</button>
+  <div id="result"></div>
+
+  <h1>Проверка условий</h1>
+  <label for="condition1">Условие 1:</label>
+  <input type="checkbox" id="condition1">
+  <br>
+  <label for="condition2">Условие 2:</label>
+  <input type="checkbox" id="condition2">
+  <br>
+  <button onclick="performCheck()">Проверить</button>
+  <div id="output1"></div>
+
+
+  <h1>Проверка фамилии на палиндром</h1>
+  <label for="inputSurname">Введите фамилию:</label>
+  <input type="text" id="inputSurname">
+  <button onclick="checkPalindrome()">Проверить</button>
+  <div id="output2"></div>
+
+  <h1>Вычисление среднего значения</h1>
+  <label for="inputArray">Введите массив чисел (через запятую):</label>
+  <input type="text" id="inputArray">
+  <button onclick="performCalculation()">Выполнить</button>
+  <div id="output3"></div>
+
+</body>
+</html>
+

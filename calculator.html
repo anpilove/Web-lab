@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<script>
+    // Задание 1
+    let num = prompt("Введите любое число:");
+    // Задание 2
+    let num1 = prompt("Введите первое число:");
+    let num2 = prompt("Введите второе число:");
+
+    let sum = Number(num1) + Number(num2);
+    let diff = num1 - num2;
+    let prod = num1 * num2;
+    let div = num1 / num2;
+
+    document.write("Результаты арифметических операций: <br>");
+    document.write(num1 + " + " + num2 + " = " + sum + "<br>");
+    document.write(num1 + " - " + num2 + " = " + diff + "<br>");
+    document.write(num1 + " * " + num2 + " = " + prod + "<br>");
+    document.write(num1 + " / " + num2 + " = " + div + "<br><br>");
+
+    // Задание 3
+    let userNum = prompt("Задумайте число, умножьте на 2 и прибавьте 7:");
+    let result = (userNum - 7)/2;
+    alert("Вы задумали число: " + result);
+
+    // Задание 4
+    let userName = prompt("Введите ваше имя:");
+    let userYear = prompt("Введите год вашего рождения:");
+    let age = new Date().getFullYear() - userYear;
+    document.write(userName + ": " + age);
+</script>
+</body>
+</html>

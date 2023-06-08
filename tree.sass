@@ -1,0 +1,128 @@
+.canvas
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100%
+  min-height: 600px
+  background-color: dodgerblue
+
+.trunk,
+.branch
+  border-radius: 25px
+  background: linear-gradient(to right, #7f3333, #4d2020)
+
+.trunk
+  position: relative
+  width: 10px
+  height: 500px
+  margin: 0 auto
+
+.branch
+  position: absolute
+  width: 5px
+
+.branch:nth-child(even)
+  transform: rotate(60deg)
+
+.branch:nth-child(odd)
+  transform: rotate(-60deg)
+
+.branch
+  position: absolute
+  width: 5px
+  transform-origin: bottom center
+
+.branch:nth-child(1)
+  top: 180px
+  height: 180px
+
+.branch:nth-child(2)
+  top: 160px
+  height: 150px
+
+.branch:nth-child(3)
+  top: 120px
+  height: 130px
+
+.branch:nth-child(4)
+  top: 100px
+  height: 120px
+
+.branch:nth-child(5)
+  top: 80px
+  height: 95px
+
+.branch:nth-child(6)
+  top: 60px
+  height: 100px
+
+.branch:nth-child(7)
+  top: 35px
+  height: 70px
+
+.leaf
+  position: absolute
+  width: 15px
+  height: 15px
+  border-radius: 75% 0 75% 0
+  background: linear-gradient(to right, #d1144e, #ba1dbb)
+
+.plod
+  position: absolute
+  width: 10px
+  height: 10px
+  border-radius: 75%
+  left: -200%
+  background: linear-gradient(to right, #2714d1, #ba1dbb)
+
+.plod:nth-child(1)
+  top: 5px
+  transform: rotate(60deg)
+  height: 150px
+
+.plod:nth-child(2)
+  top: 100px
+
+.plod:nth-child(3)
+  top: 20px
+
+.plod:nth-child(4)
+  top: 50px
+
+.plod:nth-child(5)
+  top: 50px
+
+.theSun
+  opacity: 1
+  width: 100px
+  height: 100px
+  position: absolute
+  top: 100px
+  left: 300px
+  border-radius: 50%
+  animation-name: sun_shine
+  animation-duration: 5000ms
+  animation-iteration-count: infinite
+  animation-timing-function: linear
+  box-shadow: 0 0 100px #ff0, 0 0 100px #ff0
+  background-image: radial-gradient(circle, #ffd200 95%, #f7971e)
+
+.sunray
+  border-radius: 25px
+  background-image: radial-gradient(circle, #ffd200 100%, #f7971e)
+  position: relative
+  width: 10px
+  height: 200px
+  margin: 0 auto
+  top: -50px
+
+.sunray:nth-child(1)
+  transform: rotate(-30deg)
+  top: -50px
+
+.sunray:nth-child(2)
+  top: -250px
+  transform: rotate(30deg)
+  animation-delay: 0.1s
+
+.sunray:nth

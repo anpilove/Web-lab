@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Проверка палиндрома</title>
+  <script>
+    function checkPalindrome() {
+      var input = document.getElementById("inputString").value;
+      var result = isPalindrome(input);
+      var output = document.getElementById("output1");
+      output.innerHTML = result ? "Строка является палиндромом" : "Строка не является палиндромом";
+    }
+  </script>
+
+<script>
+    function performReplacement() {
+      var input = document.getElementById("inputArray").value;
+      var arr = JSON.parse("[" + input + "]");
+      var result = replaceNegatives(arr);
+      var output = document.getElementById("output2");
+      output.innerHTML = "Результат: " + result;
+    }
+  </script>
+
+</head>
+<body>
+  <h1>Проверка палиндрома</h1>
+  <label for="inputString">Введите строку:</label>
+  <input type="text" id="inputString">
+  <button onclick="checkPalindrome()">Проверить</button>
+  <div id="output1"></div>
+
+  <h1>Замена отрицательных элементов</h1>
+  <label for="inputArray">Введите массив чисел (через запятую):</label>
+  <input type="text" id="inputArray">
+  <button onclick="performReplacement()">Выполнить</button>
+  <div id="output2"></div>
+
+
+  <h1>Вывод имени пользователя</h1>
+  <div id="output3"></div>
+
+  <h1>Переворот имени</h1>
+  <div id="output4"></div>
+
+
+</body>
+</html>
+
+<script>
+function isPalindrome(str) {
+    // Удаляем все пробелы и приводим строку к нижнему регистру
+    str = str.replace(/\s/g, '').toLowerCase();
+    
+    // Проверяем, является ли строка палиндромом
+    var reversedStr = str.split('').reverse().join('');
+    return str === reversedStr;
+  }
+</script>
+
+<script>
+    function replaceNegatives(arr) {
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] < 0) {
+      arr[i] = arr[i] * arr[i];
+    }
+  }
+  return arr;
+}
+</script>
+
+<script>
+    function replaceNegatives(arr) {
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i] < 0) {
+        arr[i] = arr[i] * arr[i];
+      }
+    }
+    return arr;
+  }
+</script>
+
+<script>
+class User {
+  constructor(name) {
+    this.name = name;
+  }
+  
+  display() {
+    document.getElementById("output3").innerHTML = "Имя пользователя: " + this.name;
+  }
+}
+
+// Пример использования класса
+var user = new User("John Doe");
+user.display();
+</script>
+
+<script>
+    class NameReverser {
+  constructor(name) {
+    this.name = name;
+  }
+  
+  reverse() {
+    var reversedName = this.name.split('').reverse().join('');
+    document.getElementById("output4").innerHTML = "Перевёрнутое имя: " + reversedName;
+  }
+}
+
+// Пример использования класса
+var reverser = new NameReverser("John Doe");
+reverser.reverse();
+</script>
+
+  
+  

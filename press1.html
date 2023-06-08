@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Программа для застолий</title>
+</head>
+<body>
+  <h2>Введите 1 для выхода из программы:</h2>
+  <input type="text" id="answer">
+  <button onclick="checkAnswer()">Проверить</button>
+
+  <script>
+    function checkAnswer() {
+      let answerInput = document.getElementById("answer");
+      if (answerInput.value === "1") {
+        document.write("Вы вышли из программы.");
+      } else {
+        answerInput.value = "";
+        answerInput.focus();
+      }
+    }
+  </script>
+</body>
+</html>

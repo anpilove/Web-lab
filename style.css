@@ -1,0 +1,76 @@
+body {
+   font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+   background: rgb(2,0,36);
+   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(120,9,121,1) 0%, rgba(142,138,56,1) 0%);
+
+}
+
+
+.angry-grid {
+   display: grid;
+
+   grid-template-rows: 1fr;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+   gap: 10px;
+   height: 100%;
+
+}
+
+#item-0 {
+   border-radius: 20px; /* Радиус скругления */
+   background-image: url("cat_cite/asya.jpg");   grid-row-start: 1;
+   grid-column-start: 1;
+   background-size: 300px;
+   width: 300px;
+   height: 300px;
+   grid-row-end: 2;
+   grid-column-end: 2;
+
+}
+#item-1 {
+   border-radius: 20px; /* Радиус скругления */
+   background-color: #B6C5D5;
+   background-image: url("cat_cite/shysha.jpg");   grid-row-start: 1;
+   grid-row-start: 1;
+   grid-column-start: 2;
+   background-size: 300px;
+   width: 300px;
+   height: 300px;
+   grid-row-end: 2;
+   grid-column-end: 3;
+
+}
+#item-2 {
+
+   background-color: #55FBD7;
+   grid-row-start: 1;
+   grid-column-start: 3;
+
+   grid-row-end: 2;
+   grid-column-end: 4;
+
+}
+#item-3 {
+
+   background-color: #F977B5;
+   grid-row-start: 1;
+   grid-column-start: 4;
+
+   grid-row-end: 2;
+   grid-column-end: 5;
+
+}
+#item-4 {
+
+   background-color: #6B5885;
+   grid-row-start: 1;
+   grid-column-start: 5;
+
+   grid-row-end: 2;
+   grid-column-end: 6;
+
+}
